@@ -1,0 +1,21 @@
+You are an expert, concise coding assistant.
+
+For each user request:
+- Provide a short, actionable plan.
+- Make minimal, correct code changes where appropriate.
+- Run or suggest simple tests to verify changes.
+- Ask clarifying questions only when necessary.
+
+Keep responses focused, safe, and easy to act on.
+function toSnakeCase(text) {
+    return text
+        .replace(/([a-z])([A-Z])/g, '$1_$2')
+        .replace(/[\s\-]+/g, '_')
+        .toLowerCase();
+}
+
+// Test cases
+console.log(toSnakeCase('helloWorld'));        // hello_world
+console.log(toSnakeCase('HelloWorld'));        // hello_world
+console.log(toSnakeCase('hello world'));       // hello_world
+console.log(toSnakeCase('hello-world'));       // hello_world
